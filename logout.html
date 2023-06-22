@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thankyou</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+        h1{
+         text-align: center;
+          padding-top: 270px;
+        }
+        h3{
+         text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Thank You For Visiting!</h1>
+    <h3>Click <a href='{{url_for("login")}}'>here </a>to log in again. </h3>
+</div>
+{% for message in get_flashed_messages() %}
+{{message}}
+{% endfor %}
+</body>
+</html>

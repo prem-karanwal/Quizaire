@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+      .start{
+ padding: 1rem;
+    cursor: pointer;
+    font-size: inherit;
+    color: white;
+    background: black;
+    border-radius: 8px;
+    margin-right: 5px;
+
+}
+
+.square {
+background-color: #f1f1f1;
+      width: 500px;
+      height: 500px;
+    }
+    
+body{
+
+      display: flex;
+      align-items: center;
+        text-align: center;
+      justify-content: center;
+      margin: 0 auto;
+      height: 100vh;
+
+
+  }
+  .container{
+      padding-top: 100px;
+  }
+
+    </style>
+</head>
+<body>
+<div class="square">
+    <div class="container">
+        <h1><u>Welcome To Quizaire</u></h1>
+        <h2>Please login to proceed</h2>
+
+        <form action="" method="post">
+            <label>Username:</label>
+            <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+            <br><br>
+            <label>Password:</label>
+            <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+            <br><br>
+            <input class="start" type="submit" value="Login">
+        </form>
+        {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+            {% endif %}
+
+        </p>
+        {% for message in get_flashed_messages() %}
+        {{message}}
+        {% endfor %}
+    </div>
+</div>
+
+
+</body>
+</html>

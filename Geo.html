@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geography Quiz</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+.start{
+ padding: 1rem;
+    cursor: pointer;
+    font-size: inherit;
+    color: white;
+    background: black;
+    border-radius: 8px;
+    margin-right: 5px;
+
+}
+
+ .jumbotron {
+  padding-top: 20px;
+  padding-bottom: 5px;
+width: 1366px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 6s;
+animation-iteration-count: infinite;
+ text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px darkred;
+
+}
+
+@keyframes example {
+  0%   {background-image: linear-gradient(to right, #434343 0%, black 100%);}
+  25%  {background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);}
+  50%  {background-image: linear-gradient(to right, #020024,#79090b, #2b3436);}
+  100% {background-image: linear-gradient(to right, #870000, #190a05);}
+}
+h1{
+color:white;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="me-auto">
+        <a class="navbar-brand " href="#">QUIZAIRE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <div class="me-auto">
+        <button type="button" class="btn" onclick="window.location.href = '{{url_for('home')}}';">Home</button>
+        <button type="button" class="btn" onclick="window.location.href = '{{url_for('about')}}';">About</button>
+
+
+    </div>
+</nav>
+<br>
+<div class="jumbotron text-center">
+    <h1>Geography Quiz</h1>
+
+</div>
+<div class="text-center">
+    <button class="start" onclick="window.location.href = '{{url_for('geog')}}';">Start the Quiz</button>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
