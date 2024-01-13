@@ -1,4 +1,4 @@
-# Quizaire - A quiz web application
+#  Quizaire - A quiz web application  🌟
 Quizaire is a captivating quiz web app, that seamlessly blends HTML, CSS, JavaScript, and Flask. Dive into diverse quiz categories – Sports, Geography, and General Knowledge – heightened by a mesmerizing Parallax effect.
 
 Key Features:
